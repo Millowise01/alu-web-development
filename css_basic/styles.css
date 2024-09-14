@@ -22,12 +22,18 @@ article {
     flex: 2;
     overflow-y: auto;
     padding: 20px;
+    background-color: #f0f8ff; /* Light blue background for article */
+    border: 2px solid #000080; /* Navy border */
+    border-radius: 10px;
 }
 
 aside {
     flex: 1;
     overflow-y: auto;
     padding: 20px;
+    background-color: #f0f8ff; /* Light blue background for aside */
+    border: 2px solid #000080; /* Navy border */
+    border-radius: 10px;
 }
 
 /* General styling for header and footer */
@@ -62,17 +68,39 @@ header nav ul li a:hover {
 
 footer {
     text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-top: 2px solid #000080; /* Navy border */
 }
 
-/* Styling for content within article and aside */
-article, aside {
-    background-color: #f4f4f4;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+footer a {
+    color: #ff6347; /* Tomato color for link */
+}
+
+footer a:hover {
+    color: #ffa07a; /* Light salmon color for link hover */
+}
+
+/* Styling for logo */
+.logo {
+    font-size: 24px;
+    margin-right: 20px;
 }
 
 /* Optional: Make sure the footer stays at the bottom */
 footer {
     align-self: flex-end;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    article, aside {
+        flex: 1;
+        margin: 0;
+    }
 }
